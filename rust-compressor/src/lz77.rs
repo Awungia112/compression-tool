@@ -53,7 +53,7 @@ pub fn decompress_lz77(data: &[u8]) -> Vec<u8> {
             let distance = data[i + 1] as usize;
             let length = data[i + 2] as usize;
 
-            for j in 0..length {
+            for _j in 0..length {
                 result.push(result[result.len() - distance]);
             }
 
